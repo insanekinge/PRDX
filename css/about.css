@@ -1,0 +1,30 @@
+.container {
+        
+        width: 100%;
+        /* height: calc(100vh - 67px); */
+        height: 1000px;
+        overflow-y: auto;
+        background-color: var(--brown);
+        color: var(--black);
+  }
+  .container::-webkit-scrollbar {
+    width: 0;
+  }
+  .container::-moz-scrollbar{
+    width: 0px;
+    height: 0px;
+  }
+  @media (min-width: 1024px){
+    .container{
+      height: calc(100vh - 86px);
+    }
+  }      
+  @media (min-width: 1600px){    
+  
+  }
+  @media (min-width: 3000px){
+    .container{
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }   
+  }     
