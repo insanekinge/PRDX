@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "DrukCyr-Bold";  
+  src: url("../fonts/DrukCyr-Bold.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+}
+   
+@font-face{
+  font-family: "HelveticaNeueCyr-Roman";
+  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar { 
+  width: 0; 
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --red: rgb(255, 0, 0);
+  --purpule: rgb(164, 99, 99);
+  --brown: #d97878;
+}
+
+body{
+  font-family: "HelveticaNeueCyr-Roman";
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { width: 0; }
+
+.wrapper{
+  margin: 0 15px;
+  overflow-y: scroll; /* Или overflow-y: auto; */
+  place-items: center;
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+  
+}
+.wrapper::-webkit-scrollbar { width: 0; }
+span{
+}
+
+
+  header{
+    display: none; /* Изначально скрываем header */
+
+    background-color: var(--purpule);
+    color: var(--black);
+    height: 50px;
+    width: 100vw;
+    
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 48px;
+  }
+  .preloader{
+    background-color: var(--white);
+    color: var(--black);
+    height: 100vh;
+    width: 100vw;
+    transition: height 2s, width 2s;
+
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 48px;
+  }
+  
+.container{
+  display: none; /* Изначально скрываем container */
+
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
+}
+
+footer{
+
+  display: none; /* Изначально скрываем header */
+
+  background-color: var(--white);
+  color: var(--black);
+  height: 100px;
+  width: 100vw;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+}
+
+
+  @media (min-width: 1024px){
+
+  }      
+  @media (min-width: 1600px){
+                
+  }
+
+  @media (min-width: 3000px){
+               
+  }
