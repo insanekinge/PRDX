@@ -4,7 +4,6 @@ gsap.set(".header", {y: "-50px" }); // Начально устанавливае
 gsap.set(".container", {y: "0", display: "none"}); // Начально устанавливаем container за пределами экрана
 gsap.set(".footer", {y: "0", display: "none"}); // Начально устанавливаем container за пределами экрана
 gsap.set(".preloader", {y: "-50px", height: "100vh", width: "100vw"}); // Устанавливаем начальные размеры preloader
-
 gsap.to(".preloader", {
   duration: 2, // Продолжительность анимации preloader
   height: "80vh",
@@ -17,9 +16,7 @@ gsap.to(".preloader", {
     gsap.set("body, .wrapper", { overflow: "auto" }); // Включаем прокрутку в body и wrapper после анимации
   }
 });
-
 gsap.set("body, .wrapper", { overflow: "hidden" }); // Изначально отключаем прокрутку в body и wrapper
-
 gsap.to(window, {
   scrollTrigger: {
     trigger: ".container",
@@ -33,4 +30,3 @@ gsap.to(window, {
     }
   }
 });
-
