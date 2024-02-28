@@ -62,13 +62,13 @@ span{
 
 
   header{
-    display: none; /* Изначально скрываем header */
-
+    flex-shrink: 0;
+    display: block;
     background-color: var(--purpule);
     color: var(--black);
     height: 50px;
     width: 100vw;
-    
+    transform: translateY(-10px);
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -77,6 +77,7 @@ span{
     font-size: 48px;
   }
   .preloader{
+    flex-grow: 1;
     background-color: var(--white);
     color: var(--black);
     height: 100vh;
