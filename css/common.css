@@ -1,13 +1,14 @@
 @font-face {
-  font-family: "DrukCyr-Bold";  
-  src: url("../fonts/DrukCyr-Bold.ttf") format("truetype"); 
+  font-family: "JetBrainsMono-Regular";  
+  src: url("../fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype"), url("../fonts/webfonts/JetBrainsMono-Regular.woff") format("woff"); 
   font-style: normal; 
   font-weight: normal;
+  font-display: fallback; 
 }
    
 @font-face{
-  font-family: "HelveticaNeueCyr-Roman";
-  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-family: "JetBrainsMono-Bold";
+  src: url("../fonts/ttf/JetBrainsMono-Bold.ttf") format("truetype"), url("../fonts/webfonts/JetBrainsMono-Bold.woff") format("woff");
   font-style: normal; 
   font-weight: normal; 
 }
@@ -24,26 +25,22 @@ html::-webkit-scrollbar {
 :root {
   --black: #000000;
   --white: #ffffff;
-  --red: rgb(255, 0, 0);
-  --purpule: rgb(164, 99, 99);
-  --brown: #d97878;
 }
 
 body{
-  font-family: "HelveticaNeueCyr-Roman";
+  font-family: "JetBrainsMono-Regular";
   background-color: var(--black);
   color: var(--white);
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   -ms-overflow-style: none;  /* IE и Edge */
   scrollbar-width: none;  /* Firefox */
 }
 body::-webkit-scrollbar { width: 0; }
 
 .wrapper{
-  margin: 0 15px;
-  overflow-y: scroll; /* Или overflow-y: auto; */
+  margin: 0 8px;
+  overflow-y: hidden; /* Или overflow-y: auto; */
   place-items: center;
   -ms-overflow-style: none; /* IE и Edge */
   scrollbar-width: none; /* Firefox */
@@ -51,46 +48,171 @@ body::-webkit-scrollbar { width: 0; }
   color: var(--white);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
 
+.wrapper::-webkit-scrollbar { width: 0; }
 
+header{
+  flex-shrink: 0;
+  background-color: var(--black);
+  color: var(--white);
+  height: 50px;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px #ffffff solid ;
+  margin: 8px 8px 0 8px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   
 }
-.wrapper::-webkit-scrollbar { width: 0; }
-span{
+
+.header__logo{
+ display: flex;
+ min-width: 56px;
+ min-height: 46px;
+ border-right: 1px #ffffff solid ;
+ align-items: center;
+ justify-content: center;
+ align-self: self-start;
+ justify-self: start;
+ grid-area: 1 / 1 / 2 / 2;
+}
+
+.header__logo-image{
+
+}
+
+.header__basket{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.header__nav{
+  display: flex;
+  min-width: 56px;
+  min-height: 46px;
+  border-left: 1px #ffffff solid ;
+  align-items: center;
+  justify-content: center;
+  align-self: self-start;
+  justify-self: end;
+  
+
+  grid-area: 1 / 4 / 2 / 5; 
+}
+
+.header__nav-item{
+
+}
+
+/* Hide the menu items initially */
+.header__nav-list {
+  display: none;
+}
+
+/* Style the burger menu icon */
+.header__menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12px;
+}
+
+/* Style the burger menu icon spans */
+.header__menu-btn_span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Animation for opening the menu */
+.header__nav-list.open {
+  height: 100%;
+  display: flex;
+  animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.preloader{
+  flex-grow: 1;
+  background-color: var(--black);
+  color: var(--white);
+  height: 100vh;
+  width: 100vw;
+  transition: height 2s, width 2s;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "JetBrainsMono-Bold";
+  padding: 8px;
+}
+
+.preloader__inner{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ 
+}
+
+.preloader__letter{
+  position: absolute;
+  max-width: 37px;
+  max-height: 26px;
+  width: 100%;
+}
+
+.preloader__letter-image{
+  max-width: 37px;
+  max-height: 26px;
+  height: auto;
+  width: 100%;
+}
+
+.preloader__letter:nth-child(1){
+}
+
+.preloader__letter:nth-child(2){
+}
+
+.preloader__letter:nth-child(3){
+  transform-origin: bottom right;
+  /* transform: translate(-50%, 0%); */
+}
+
+.preloader__letter:nth-child(4){
 }
 
 
-  header{
-    flex-shrink: 0;
-    display: block;
-    background-color: var(--purpule);
-    color: var(--black);
-    height: 50px;
-    width: 100vw;
-    transform: translateY(-10px);
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 48px;
-  }
-  .preloader{
-    flex-grow: 1;
-    background-color: var(--white);
-    color: var(--black);
-    height: 100vh;
-    width: 100vw;
-    transition: height 2s, width 2s;
 
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 48px;
-  }
+
   
 .container{
   display: none; /* Изначально скрываем container */
@@ -105,6 +227,9 @@ span{
   justify-content: center;
   text-align: center;
   font-size: 48px;
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px #ffffff solid;
 }
 
 .container::-webkit-scrollbar {
@@ -115,8 +240,8 @@ footer{
 
   display: none; /* Изначально скрываем header */
 
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
   height: 100px;
   width: 100vw;
   text-transform: uppercase;

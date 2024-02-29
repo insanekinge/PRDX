@@ -9,20 +9,54 @@
   <link rel="stylesheet" href="css/about.css">
   <link rel="icon" href="img/" type="">
   <title>PRDX</title>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  
 </head>
 
-<body class="loaded" data-page="contacts" onload="init()">
+<body>
 
     <div class="wrapper">
 
       <header class="header">
-        header
+        <div class="header__logo">
+          <img src="img/header/logo.svg" alt="" class="header__logo-image">
+        </div>
+        <div class="header__basket">Корзина (7)</div>
+
+        <div class="header__nav">
+          <label for="header-toggle" class="header__menu-btn">
+            <span class="header__menu-btn_span"></span>
+            <span class="header__menu-btn_span"></span>
+            <span class="header__menu-btn_span"></span>
+          </label>
+        </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-list_item">О нас</li>
+          <li class="header__nav-list_item">Каталог</li>
+        </ul>
       </header>
 
       <div class="preloader" id="preloader">
         <div class="preloader__inner">
-          PRELOADER
+
+          <div class="preloader__letter">
+            <img src="img/preloader/P-image.svg" alt="" class="preloader__letter-image">
+          </div>
+
+          <div class="preloader__letter">
+            <img src="img/preloader/R-image.svg" alt="" class="preloader__letter-image">
+          </div>
+
+          <div class="preloader__letter">
+            <img src="img/preloader/X-image.svg" alt="" class="preloader__letter-image">
+          </div>
+
+          <div class="preloader__letter">
+            <img src="img/preloader/D-image.svg" alt="" class="preloader__letter-image">
+          </div>
+
         </div>
       </div> 
 
@@ -37,5 +71,6 @@
       </footer>
     </div>
     <script src="js/preloader.js"></script>
+    <script src="js/burger-menu.js"></script>
 </body>
 </html>

@@ -3,9 +3,7 @@
         width: 100%;
         /* height: calc(100vh - 67px); */
         height: 1000px;
-        overflow-y: auto;
-        background-color: var(--brown);
-        color: var(--black);
+        /* overflow-y: auto; */
   }
   .container::-webkit-scrollbar {
     width: 0;
@@ -24,7 +22,5 @@
   }
   @media (min-width: 3000px){
     .container{
-      overflow-y: scroll;
-      scroll-behavior: smooth;
     }   
   }     
