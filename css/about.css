@@ -1,9 +1,6 @@
 .container {
-        
         width: 100%;
-        /* height: calc(100vh - 67px); */
-        height: 1000px;
-        /* overflow-y: auto; */
+        height: calc(100dvh - 3.125rem);
   }
   .container::-webkit-scrollbar {
     width: 0;
@@ -12,9 +9,203 @@
     width: 0px;
     height: 0px;
   }
+
+
+.brand{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-column-gap: 0rem;
+  grid-row-gap: 2.25rem;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0 1.125rem 0;
+  border-top: 1px #ffffff solid;
+  border-bottom: 1px #ffffff solid;
+}
+
+.brand__title{
+  grid-area: 1 / 1 / 4 / 3;
+  font-size: var(--titleMobilesize);
+  letter-spacing: -0.05rem;
+  text-align: start;
+}
+
+.brand__text-first{
+  grid-area: 1 / 3 / 4 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+}
+
+.brand__text-second{
+  grid-area: 4 / 1 / 5 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+  text-indent: 50%;
+}
+
+.brand__text-third{
+  grid-area: 5 / 3 / 6 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+}
+
+.brand__video{
+  grid-area: 6 / 1 / 7 / 5;
+  width: 100%;
+  height: 501px;
+  object-fit: cover;
+}
+
+
+.author{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 0rem;
+  grid-row-gap: 2.25rem;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0 1.125rem 0;
+  border-bottom: 1px #ffffff solid;
+}
+
+.author__title{
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: var(--titleMobilesize);
+  letter-spacing: -0.05rem;
+  text-align: start;
+}
+
+.author__text-first{
+  grid-area: 1 / 3 / 2 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+}
+
+.author__text-second{
+  grid-area: 2 / 1 / 3 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+  text-indent: 50%;
+}
+
+.author__image{
+  grid-area: 3 / 3 / 4 / 5;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+}
+
+.author__image-pic{
+  width: 100%;
+  height: auto;
+}
+
+
+.author__text-third{
+  grid-area: 4 / 1 / 5 / 5; 
+  
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+  text-indent: 50%;
+}
+
+
+.product{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: 0rem;
+  grid-row-gap: 2.25rem;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0 2.25rem 0;
+}
+
+.product__title{
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: var(--titleMobilesize);
+  letter-spacing: -0.05rem;
+  text-align: start;
+}
+
+.product__text-first{
+  grid-area: 1 / 3 / 2 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+}
+
+.product__text-second{
+  grid-area: 2 / 1 / 3 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+  text-indent: 50%;
+}
+
+.product__text-third{
+  grid-area: 3 / 3 / 4 / 5;
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+}
+
+.product__text-fourth{
+  grid-area: 4 / 1 / 5 / 5; 
+  
+  font-size: var(--textMobilesize);
+  text-align: start;
+  line-height: 140%;
+  text-transform: math-auto;
+  letter-spacing: -0.025rem;
+  text-indent: 50%;
+}
+
+.product__catalog{
+  grid-area: 5 / 1 / 6 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  color: var(--white);
+  border: 1px var(--white) solid;
+  width: 100%;
+  height: 48px;
+}
+
+
+
+
   @media (min-width: 1024px){
     .container{
-      height: calc(100vh - 86px);
+
     }
   }      
   @media (min-width: 1600px){    
