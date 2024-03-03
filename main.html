@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/" type="">
+  <title>MAIN</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+      <header class="header">
+        <div class="header__logo">
+          <img src="img/header/logo.svg" alt="" class="header__logo-image">
+        </div>
+        <div class="header__basket">Корзина (7)</div>
+
+        <div class="header__nav">
+          <label for="header-toggle" class="header__menu-btn">
+            <span class="header__menu-btn_span"></span>
+            <span class="header__menu-btn_span"></span>
+            <span class="header__menu-btn_span"></span>
+          </label>
+        </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-list_item">О нас</li>
+          <li class="header__nav-list_item">Каталог</li>
+        </ul>
+      </header>
+      
+
+      <div class="container">
+        
+        <div class="preloader" id="preloader">
+          <div class="preloader__inner">
+            <div class="preloader__letter">
+              <img src="img/preloader/P-image.svg" alt="" class="preloader__letter-image">
+            </div>
+            <div class="preloader__letter">
+              <img src="img/preloader/R-image.svg" alt="" class="preloader__letter-image">
+            </div>
+            <div class="preloader__letter">
+              <img src="img/preloader/X-image.svg" alt="" class="preloader__letter-image">
+            </div>
+            <div class="preloader__letter">
+              <img src="img/preloader/D-image.svg" alt="" class="preloader__letter-image">
+            </div>
+          </div>
+        </div> 
+
+        <div class="container__content">
+
+
+          <section class="video">
+
+            <div class="video__top">
+              <h3 class="video__top-title">SIEMPRE POR ENCIMA DE LAS EXPECTATIVAS</h3>
+              <p class="video__top-text">Nuestras joyas son arte en&nbsp;plata moderno y&nbsp;elegante. Anillos, pendientes, pulseras y&nbsp;kafas de&nbsp;dise&ntilde;os amorfos resaltan su&nbsp;individualidad. Descubra joyas &uacute;nicas en&nbsp;las que modernidad y&nbsp;estilo se&nbsp;unen en&nbsp;perfecto equilibrio.</p>
+              <a href="" class="video__top-scroll">(Scroll down)</a>
+              <div class="video__top-num">(45)</div>
+            </div>
+
+            <video class="video__play" autoplay muted>
+              <source src="video/about-video.mp4" type="video/mp4">
+            </video>
+
+          </section>
+
+
+          <section class="popular">
+
+            <div class="popular__top">
+              <h3 class="popular__top-title">los productos más populares</h3>
+              <p class="popular__top-text">Nuestras joyas son arte en&nbsp;plata moderno y&nbsp;elegante. Anillos, pendientes, pulseras y&nbsp;kafas de&nbsp;dise&ntilde;os amorfos resaltan su&nbsp;individualidad. Descubra joyas &uacute;nicas en&nbsp;las que modernidad y&nbsp;estilo se&nbsp;unen en&nbsp;perfecto equilibrio.</p>
+              <p class="popular__top-count">(09)</p>
+            </div>
+
+            <ul class="popular__list">
+
+              <li class="popular__list-item">
+
+                <div class="popular__list-item_image">
+                  <img src="img/main/clothes-item.png" alt="" class="popular__list-item_image-pic">
+                </div>
+
+                <div class="popular__list-item_description">
+                  <p class="popular__list-item_description-name">Dawn Sky</p>
+                  <p class="popular__list-item_description-price">27 600 ₽</p>
+                </div>
+
+                <div class="popular__list-item_options">
+                    <div class="popular__list-item_options-details">Details</div>
+                    <div class="popular__list-item_options-add">Add to card</div>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </section>
+
+
+          <section class="season">
+            <h3 class="season__title">
+              <p class="season__title-first">refracción</p>
+              <p class="season__title-second">de</p>
+              <p class="season__title-third">lo</p>
+              <p class="season__title-fourth">habitual</p>
+            </h3>
+            <h3 class="season__date">SS23</h3>
+          </section>
+
+          <section class="collection">
+
+            <div class="collection__top">
+              <h3 class="collection__top-title">colección de formas caprichosas</h3>
+              <p class="collection__top-text">Nuestras joyas son arte en&nbsp;plata moderno y&nbsp;elegante. Anillos, pendientes, pulseras y&nbsp;kafas de&nbsp;dise&ntilde;os amorfos resaltan su&nbsp;individualidad. Descubra joyas &uacute;nicas en&nbsp;las que modernidad y&nbsp;estilo se&nbsp;unen en&nbsp;perfecto equilibrio.</p>
+              <a href="" class="collection__top-count">(23)</a>
+            </div>
+            
+
+
+            <ul class="collection__list">
+
+              <li class="collection__list-item">
+
+                <div class="collection__list-item_image">
+                  <img src="img/main/clothes-item.png" alt="" class="collection__list-item_image-pic">
+                </div>
+
+                <div class="collection__list-item_description">
+                  <p class="collection__list-item_description-name">Dawn Sky</p>
+                  <p class="collection__list-item_description-price">27 600 ₽</p>
+                </div>
+
+                <div class="collection__list-item_options">
+                    <div class="collection__list-item_options-details">Details</div>
+                    <div class="collection__list-item_options-add">Add to card</div>
+                </div>
+
+              </li>
+
+            </ul>
+          </section>
+
+          <section class="entre">
+            <h3 class="entre__title">
+              <p class="entre__title-first">escurridiza</p>
+              <p class="entre__title-second">armonía</p>
+              <p class="entre__title-third">entre</p>
+            </h3>
+            <h3 class="entre__date">SS23</h3>
+          </section>
+
+
+          <section class="expectations">
+
+            <div class="expectations__top">
+              <h3 class="expectations__top-title">SIEMPRE POR ENCIMA DE LAS EXPECTATIVAS</h3>
+              <p class="expectations__top-text">Todo lo&nbsp;que nuestros ojos pueden abarcar se&nbsp;pliega en&nbsp;un&nbsp;fen&oacute;meno infinitamente complejo y&nbsp;misterioso llamado vida. La&nbsp;marca Paradox explora esta profundidad, reflejada en&nbsp;piezas de&nbsp;joyer&iacute;a &uacute;nicas que revelan historias sin respuestas y&nbsp;momentos sin tiempo.</p>
+              <a href="" class="expectations__top-count">(23)</a>
+            </div>
+            
+            <ul class="expectations__list">
+
+              <li class="expectations__list-item">
+
+                <div class="expectations__list-item_image">
+                  <img src="img/main/clothes-item.png" alt="" class="expectations__list-item_image-pic">
+                </div>
+
+                <div class="expectations__list-item_description">
+                  <p class="expectations__list-item_description-name">Dawn Sky</p>
+                  <p class="expectations__list-item_description-price">27 600 ₽</p>
+                </div>
+
+                <div class="expectations__list-item_options">
+                    <div class="expectations__list-item_options-details">Details</div>
+                    <div class="expectations__list-item_options-add">Add to card</div>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </section>
+
+
+
+          <!-- Footer -->
+
+          <div class="footer">  
+
+            <h3 class="footer__title">Часы работы службы поддержки</h3>
+    
+            <p class="footer__day-first">Понедельник - Пятница</p>  <p class="footer__hour-first">9:00&nbsp;&mdash; 19:00</p>
+    
+            <p class="footer__day-second">Понедельник - Пятница</p>  <p class="footer__hour-second">9:00&nbsp;&mdash; 19:00</p>
+    
+            <p class="footer__day-third">Понедельник - Пятница</p>  <p class="footer__hour-third">9:00&nbsp;&mdash; 19:00</p>
+    
+            <p class="footer__mail">Электронная почта</p> <a href="prdx@paradox.jewelry" class="footer__mail-adres">prdx@paradox.jewelry</a>
+    
+            <p class="footer__social">Социальные сети</p>
+    
+            <div class="footer__social-links">
+              <a href="" class="footer__social-links_instagram">Instagram</a>
+              <a href="" class="footer__social-links_watsapp">Watsapp</a>
+            </div>
+    
+            <p class="footer__partner">Если вы хотите стать нашим партнером или предложить товары для продажи, пожалуйста, свяжитесь по адресу: 
+              <a href="prdx@paradox.jewelry" class="footer__partner-link">prdx@paradox.jewelry</a>
+            </p>
+    
+            <div class="footer__policy">
+              <a href="" class="footer__policy-confident">Политика конфеденциальности</a>
+              <a class="footer__policy-oferta">Публичная оферта</a>
+            </div>
+            
+            <div class="footer__logo">
+              <div class="footer__letter">
+                <img src="img/common/P-image.svg" alt="" class="footer__letter-image">
+              </div>
+    
+              <div class="footer__letter">
+                <img src="img/common/R-image.svg" alt="" class="footer__letter-image">
+              </div>
+
+              <div class="footer__letter">
+                <img src="img/common/D-image.svg" alt="" class="footer__letter-image">
+              </div>
+    
+              <div class="footer__letter">
+                <img src="img/common/X-image.svg" alt="" class="footer__letter-image">
+              </div>
+    
+              
+            </div>
+    
+          </div>
+        </div>
+
+      </div>
+
+
+      
+    </div>
+    <script src="js/preloader.js"></script>
+    <script src="js/burger-menu.js"></script>
+</body>
+</html>
