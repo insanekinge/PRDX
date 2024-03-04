@@ -65,9 +65,10 @@ function handleScroll(event) {
         
 
         if (scrollCount === 3) {
-          document.body.style.overflow = "auto"; // Включение скролла в body после завершения анимации
+          document.body.style.overflow = "hidden"; // Включение скролла в body после завершения анимации
           let container = document.querySelector(".container");
           container.style.overflow = "auto";
+          container.style.overflowX = "hidden";
         } else {
           setTimeout(() => {
             window.addEventListener("wheel", handleScroll, { once: true }); // Добавление задержки между скроллами

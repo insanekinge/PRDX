@@ -47,7 +47,7 @@ body::-webkit-scrollbar { width: 0; }
 
 .wrapper{
   margin: 0 0.5rem;
-  overflow-y: hidden; /* Или overflow-y: auto; */
+  overflow: hidden; /* Или overflow-y: auto; */
   place-items: center;
   -ms-overflow-style: none; /* IE и Edge */
   scrollbar-width: none; /* Firefox */
