@@ -19,7 +19,6 @@
   grid-row-gap: 2.25rem;
   width: 100%;
   height: auto;
-  padding: 0.5rem 0 1.125rem 0;
   border-top: 1px #ffffff solid;
   border-bottom: 1px #ffffff solid;
 }
@@ -75,7 +74,6 @@
   grid-row-gap: 2.25rem;
   width: 100%;
   height: auto;
-  padding: 0.5rem 0 1.125rem 0;
   border-bottom: 1px #ffffff solid;
 }
 
