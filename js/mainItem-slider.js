@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-        const slider = document.querySelector('.popular__list');
-        let isDragging = false;
-        let startPosition = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-      
-        let animationID;
-      
-        slider.addEventListener('mousedown', startTouch);
-        slider.addEventListener('touchstart', startTouch);
-        slider.addEventListener('mouseup', endTouch);
-        slider.addEventListener('mouseleave', endTouch);
-        slider.addEventListener('touchend', endTouch);
-        slider.addEventListener('mousemove', moveTouch);
-        slider.addEventListener('touchmove', moveTouch);
+  const slider = document.querySelector('.popular__list');
+  if (slider) {
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+
+    let animationID;
+
+    slider.addEventListener('mousedown', startTouch);
+    slider.addEventListener('touchstart', startTouch);
+    slider.addEventListener('mouseup', endTouch);
+    slider.addEventListener('mouseleave', endTouch);
+    slider.addEventListener('touchend', endTouch);
+    slider.addEventListener('mousemove', moveTouch);
+    slider.addEventListener('touchmove', moveTouch);
       
         function startTouch(e) {
           if (e.type === 'touchstart') {
@@ -44,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
           slider.style.transform = `translateX(${currentTranslate}px)`;
           animationID = requestAnimationFrame(animation);
         }
-      });
+      }
+    });

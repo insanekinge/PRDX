@@ -60,6 +60,7 @@ height: 0px;
   width: 100%;
   height: 501px;
   object-fit: cover;
+  padding: 0.5rem 0;
 }
 
 .popular{
@@ -81,7 +82,7 @@ height: 0px;
   grid-row-gap: 2.25rem;
   width: 100%;
   height: auto;
-  padding: 1.125rem  1.125rem 1.125rem 1.125rem;
+  padding: 2.25rem 1.125rem 1.125rem 1.125rem;
   border: 1px var(--white) solid;
   border-bottom: none;
 }
@@ -253,6 +254,7 @@ height: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .season__title-second{
@@ -408,6 +410,7 @@ height: 0px;
   
   .video__play{
     height: 899px;
+    padding: 1.25rem 0;
   }
   
   .popular{
@@ -416,7 +419,7 @@ height: 0px;
   .popular__top{
     grid-column-gap: 0rem;
     grid-row-gap: 2.25rem;
-    padding: 1.125rem  1.125rem 1.125rem 1.125rem;
+    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   }
   
   .popular__top-title{
@@ -580,11 +583,10 @@ height: 0px;
   
   .entre__title-first{
     background-color: var(--black);
-    height: 3.188rem;
-    width: 10.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1.125rem;
   }
   
   .entre__title-second{
@@ -630,6 +632,7 @@ height: 0px;
     grid-area: 1 / 3 / 2 / 5;
     text-align: left;
     text-transform: math-auto;
+    font-size: var(--textMobilesize);
   }
   
   .video__top-num{
@@ -644,6 +647,7 @@ height: 0px;
   
   .video__play{
     height: 1054px;
+    padding: 1.5rem 0;
   }
   
   .popular{
@@ -656,7 +660,7 @@ height: 0px;
     grid-template-rows: repeat(1, auto);
     grid-column-gap: 0rem;
     grid-row-gap: 1.25rem;
-    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
   }
   
   .popular__top-title{
@@ -670,10 +674,12 @@ height: 0px;
     grid-area: 1 / 3 / 2 / 5;
     text-align: left;
     text-transform: math-auto;
+    font-size: var(--textMobilesize);
   }
   
   .popular__top-count{
     grid-area: 1 / 5 / 2 / 7;
+    font-size: var(--textMobilesize);
   }
   
   .popular__list{
@@ -806,7 +812,7 @@ height: 0px;
     width: 100%;
     background-image: url("../img/main/season-bg.png");
     background-repeat: no-repeat;
-    height: 1096px;
+    height: 50rem;
     position: relative;
     background-size: cover; /* Фоновое изображение подстраивается под размер блока, обрезая лишнее */
     background-position: center; /* Позиционирование изображения по центру блока */
@@ -844,7 +850,7 @@ height: 0px;
     width: 100%;
     background-image: url("../img/main/entre-bg.png");
     background-repeat: no-repeat;
-    height: 1096px;
+    height: 50rem;
     position: relative;
     background-size: cover; /* Фоновое изображение подстраивается под размер блока, обрезая лишнее */
     background-position: center; /* Позиционирование изображения по центру блока */
@@ -866,24 +872,275 @@ height: 0px;
   
   .entre__title-first{
     background-color: var(--black);
-    height: 3.188rem;
-    width: 10.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1.5rem;
   }
   
   .entre__title-second{
-    padding: 1.125rem;
+    padding: 1.5rem;
   }
   
   .entre__title-third{
-    padding: 1.125rem;
+    padding: 1.5rem;
   }
   
   .entre__date{
-    padding: 1.125rem;
+    padding: 1.5rem;
     right: 0;
   }
   
+}
+
+
+@media (min-width: 3440px) {
+  
+  .video{
+    grid-row-gap: 0.5rem;
+  }
+  
+  .video__top{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-column-gap: 0rem;
+    grid-row-gap: 1.25rem;
+    padding: 3rem 2.125rem 2.125rem 2.125rem;
+  }
+  
+  .video__top-title{
+    font-size: var(--titleMobilesizeSmall);
+    grid-area: 1 / 1 / 2 / 3; 
+    display: flex;
+    align-items: end;
+  }
+  
+  .video__top-text{
+    display: block;
+    grid-area: 1 / 3 / 2 / 5;
+    text-align: left;
+    text-transform: math-auto;
+  }
+  
+  .video__top-num{
+    display: none;
+    
+  }
+  
+  .video__top-scroll{
+    grid-area: 1 / 5 / 2 / 7;
+
+  }
+  
+  .video__play{
+    height: 1440px;
+    padding: 2.125rem 0;
+  }
+  
+  .popular{
+
+  }
+  
+  .popular__top{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, auto);
+    padding: 3rem 2.125rem 2.125rem 2.125rem;
+  }
+  
+  .popular__top-title{
+    grid-area: 1 / 1 / 2 / 3; 
+    font-size: var(--titleMobilesizeSmall);
+  }
+  
+  .popular__top-text{
+    grid-area: 1 / 3 / 2 / 5;
+    font-size: var(--textMobilesize);
+  }
+  
+  .popular__top-count{
+    grid-area: 1 / 5 / 2 / 7;
+    font-size: var(--textMobilesize);
+  }
+  
+  .popular__list{
+  }
+
+  .popular__list::-webkit-scrollbar {
+  }
+   
+ 
+  .popular__list {
+  }
+  
+  .popular__list-item{
+    grid-column: span 1; 
+    height: 742px;
+  }
+
+  .popular__list-item:nth-child(3n) {
+    grid-column: span 2; 
+  }
+  
+  .popular__list-item_image{
+    height: 742px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+
+  .popular__list-item_image-pic{
+    grid-area: 1 / 2 / 2 / 4;
+    width: 100%;
+  }
+
+  .popular__list-item:hover .popular__list-item_image-pic {
+    display: none;
+  }
+  
+  .popular__list-item:hover .popular__list-item_image {
+    height: 622px;
+  }
+
+  .popular__list-item:hover .popular__list-item_image-full{
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  
+  .popular__list-item:hover .popular__list-item_description {
+    height: 60px;
+    padding: 0 2.125rem;
+  }
+
+  
+  .popular__list-item:hover .popular__list-item_options {
+    height: 60px;
+    padding: 0 2.125rem;
+    width: 100%;
+  }
+
+
+  .popular__list-item_image-pic_img{
+    
+  }
+  
+  .popular__list-item_image-full{
+    display: none;
+    
+  }
+  
+  .popular__list-item_image-full_img{
+    max-height: 622px;
+  }
+  
+  .popular__list-item_description{
+    display: none;
+  
+  }
+  
+  .popular__list-item_description-name{
+  
+  }
+  
+  .popular__list-item_description-price{
+  
+  }
+  
+  
+  .popular__list-item_options{
+    display: none;
+  }
+  
+  .popular__list-item_options-details{
+    width: 50%;
+    height: 100%;
+  }
+  
+  .popular__list-item_options-add{
+    width: 50%;
+    height: 100%;
+  }
+  
+  .season{
+    width: 100%;
+    background-image: url("../img/main/season-bg.png");
+    background-repeat: no-repeat;
+    height: 50rem;
+    position: relative;
+    background-size: cover; /* Фоновое изображение подстраивается под размер блока, обрезая лишнее */
+    background-position: center; /* Позиционирование изображения по центру блока */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-position: center;
+  }
+  
+  .season__title{
+    font-size: var(--titleMobilesizeBig);
+    gap: 0.5rem;
+  }
+  
+  .season__title-first{
+    padding: 1.5rem;
+  }
+  
+  .season__title-second{
+    padding: 1.5rem;
+  }
+  
+  .season__title-third{
+    padding: 1.5rem;
+  }
+  
+  .season__title-fourth{
+    padding: 1.5rem;
+  }
+  
+  .season__date{
+    padding: 1.5rem;
+    right: 0;
+  }
+  
+  .entre{
+    width: 100%;
+    background-image: url("../img/main/entre-bg.png");
+    background-repeat: no-repeat;
+    height: 50rem;
+    position: relative;
+    background-size: cover; /* Фоновое изображение подстраивается под размер блока, обрезая лишнее */
+    background-position: center; /* Позиционирование изображения по центру блока */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+    
+  }
+  
+  .entre__title{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: var(--titleMobilesizeBig);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    gap: 0.25rem;
+  }
+  
+  .entre__title-first{
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  
+  .entre__title-second{
+    padding: 1.5rem;
+  }
+  
+  .entre__title-third{
+    padding: 1.5rem;
+  }
+  
+  .entre__date{
+    padding: 1.5rem;
+    right: 0;
+  }
 }

@@ -108,6 +108,7 @@
   width: 100%;
   height: 245px;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .author__image-pic{
@@ -196,6 +197,7 @@
   border: 1px var(--white) solid;
   width: 100%;
   height: 3rem;
+  font-size: var(--titleMobilesize);
 }
 
 
@@ -496,7 +498,7 @@
     .brand{
       grid-column-gap: 2.125rem;
       grid-row-gap: 2.125rem;
-      padding: 2.125rem 2.125rem 0;
+      padding: 2.125rem 0;
     }
     
     .brand__title{
@@ -533,7 +535,7 @@
     .author{
       grid-column-gap: 2.125rem;
       grid-row-gap: 2.125rem;
-      padding: 2.125rem 02.125rem;
+      padding: 2.125rem 0;
     }
     
     .author__title{ 
@@ -572,7 +574,7 @@
     .product{
       grid-column-gap: 2.125rem;
       grid-row-gap: 4.25rem;
-      padding: 2.125rem 2.125rem 0;
+      padding: 2.125rem 0;
     }
     
     .product__title{

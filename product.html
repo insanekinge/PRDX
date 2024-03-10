@@ -6,19 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="css/common.css"/>
-  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/product.css">
   <link rel="icon" href="img/" type="">
   <title>MAIN</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
 
     <div class="wrapper">
 
-      <header class="header">
+      <header class="header">   
         <div class="header__logo">
           <img src="img/header/logo.svg" alt="" class="header__logo-image">
         </div>
@@ -109,26 +110,122 @@
       
 
       <div class="container">
-        
-        <div class="preloader" id="preloader">
-          <div class="preloader__inner">
-            <div class="preloader__letter">
-              <img src="img/preloader/P-image.svg" alt="" class="preloader__letter-image">
-            </div>
-            <div class="preloader__letter">
-              <img src="img/preloader/R-image.svg" alt="" class="preloader__letter-image">
-            </div>
-            <div class="preloader__letter">
-              <img src="img/preloader/X-image.svg" alt="" class="preloader__letter-image">
-            </div>
-            <div class="preloader__letter">
-              <img src="img/preloader/D-image.svg" alt="" class="preloader__letter-image">
-            </div>
-          </div>
-        </div> 
 
-        <div class="container__content">
+        <div class="container__content no-preloader">
 
+          <section class="product">
+
+                <div class="product__item">
+  
+
+                  <div class="product__item-image">
+
+                    <div class="swiper-container">
+
+                      <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                          <img src="img/main/clothes-item.png" alt="" class="product__item_image-pic_img">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="img/main/clothes-item-full.png" alt="" class="product__item_image-pic_img">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="img/main/clothes-item.png" alt="" class="product__item_image-pic_img">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="img/main/clothes-item-full.png" alt="" class="product__item_image-pic_img">
+                        </div>
+
+                      </div>
+                      <div class="custom-next"></div>
+                      <div class="custom-prev"></div>
+
+                    </div>
+
+                  </div>
+                  
+
+                  <div class="product__item-counter">
+                    <p class="product__item-counter_title">Фото</p> 
+                    <p class="product__item-counter_num">2 / 12</p>
+                  </div>
+
+
+                  <div class="product__item-description">
+                    <p class="product__item-description_name">Dawn Sky</p>
+                    <p class="product__item-description_price">27 600 ₽</p>
+                  </div>
+
+
+                  <ul class="product__item-pattern">
+
+                    <li class="product__item-pattern_item">Артикул: 82914</li>
+                    <li class="product__item-pattern_item">Камень: Турмалин</li>
+                    <li class="product__item-pattern_item">Материал: Серебро 925</li>
+                    <li class="product__item-pattern_item">Размер: 18 мм</li>
+                    <li class="product__item-pattern_item">Вес: 16 г</li>
+                    <li class="product__item-pattern_item">Коллекция: 2023</li>
+
+                  </ul>
+
+
+                  <div class="product__item-add">Add to card</div>
+
+
+                  <div class="product__item-depiction-container">
+
+                    <div id="product__item-depiction-1" class="product__item-depiction">
+                      <div class="product__item-depiction_top">
+                        <div class="product__item-depiction_top-title">Описание</div>
+                        <div class="product__item-depiction_top-button">
+                          <span class="plus-icon"></span>
+                        </div>
+                      </div>
+                      <div id="product__item-depiction_hidden-1" class="product__item-depiction_hidden">
+                        <p class="product__item-depiction_hidden-text">Золотое кольцо с бриллиантом, которое станет прекрасным дополнением к любому образу. Кольцо выполнено из высококачественного золота 585 пробы, что гарантирует его долговечность и стойкость к внешним воздействиям.</p>
+                        <p class="product__item-depiction_hidden-text">Центральным элементом украшения является крупный бриллиант, который сверкает и переливается на свету, привлекая внимание окружающих. Кольцо имеет элегантный дизайн, который подчеркнет вашу индивидуальность и стиль. Это украшение станет отличным подарком для любимого человека или прекрасным дополнением к вашей коллекции ювелирных изделий.</p>
+                      </div>
+                    </div>
+                    
+                    <div id="product__item-depiction-2" class="product__item-depiction">
+                      <div class="product__item-depiction_top">
+                        <div class="product__item-depiction_top-title">Доставка и упаковка</div>
+                        <div class="product__item-depiction_top-button">
+                          <span class="plus-icon"></span>
+                        </div>
+                      </div>
+                      <div id="product__item-depiction_hidden-2" class="product__item-depiction_hidden">
+                        <p class="product__item-depiction_hidden-text">Упаковка разработана с учетом принципов устойчивого развития и экологии. Упаковку можно легко разложить и утилизировать, не оставляя отходов.</p>
+                        <p class="product__item-depiction_hidden-text">Цветовая гамма: белый цвет, как и&nbsp;любой другой цвет, амбивалентен, т.&nbsp;е. имеет двойственную природу. Белый&nbsp;&mdash; цвет высшего знания, внутренней гармонии, единения с&nbsp;внешним миром, абсолютности. Форма и&nbsp;структура: упаковка имеет простую и&nbsp;минималистическую форму, что придает ей&nbsp;сдержанный и&nbsp;элегантный вид. Текстурные элементы: текстуры натуральной бумаги добавляют тактильных ощущений.</p>
+                      </div>
+                    </div>
+
+                    <div id="product__item-depiction-3" class="product__item-depiction">
+                      <div class="product__item-depiction_top">
+                        <div class="product__item-depiction_top-title">Размерная сетка</div>
+                        <div class="product__item-depiction_top-button">
+                          <span class="plus-icon"></span>
+                        </div>
+                      </div>
+                      <div id="product__item-depiction_hidden-2" class="product__item-depiction_hidden">
+                        <p class="product__item-depiction_hidden-text">Упаковка разработана с учетом принципов устойчивого развития и экологии. Упаковку можно легко разложить и утилизировать, не оставляя отходов.</p>
+                        <p class="product__item-depiction_hidden-text">Цветовая гамма: белый цвет, как и&nbsp;любой другой цвет, амбивалентен, т.&nbsp;е. имеет двойственную природу. Белый&nbsp;&mdash; цвет высшего знания, внутренней гармонии, единения с&nbsp;внешним миром, абсолютности. Форма и&nbsp;структура: упаковка имеет простую и&nbsp;минималистическую форму, что придает ей&nbsp;сдержанный и&nbsp;элегантный вид. Текстурные элементы: текстуры натуральной бумаги добавляют тактильных ощущений.</p>
+                        <p class="product__item-depiction_hidden-text">Цветовая гамма: белый цвет, как и&nbsp;любой другой цвет, амбивалентен, т.&nbsp;е. имеет двойственную природу. Белый&nbsp;&mdash; цвет высшего знания, внутренней гармонии, единения с&nbsp;внешним миром, абсолютности. Форма и&nbsp;структура: упаковка имеет простую и&nbsp;минималистическую форму, что придает ей&nbsp;сдержанный и&nbsp;элегантный вид. Текстурные элементы: текстуры натуральной бумаги добавляют тактильных ощущений.</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+              </div>
+
+
+              
+
+          </section>
 
           <section class="catalog">
 
@@ -138,22 +235,6 @@
               <p class="catalog__top-count">(45)</p>
               
             </div>
-
-            <ul class="catalog__tab">
-                <li class="catalog__tab-item">
-                  <div class="catalog__tab-item_text">Все<span class="catalog__tab-item_text-num">(15)</span></div>
-                  <div class="catalog__tab-item_select">
-                    <div class="catalog__tab-item_select-active"></div>
-                  </div>
-                </li>
-               
-                <li class="catalog__tab-item">
-                  <div class="catalog__tab-item_text">Все<span class="catalog__tab-item_text-num">(15)</span></div>
-                  <div class="catalog__tab-item_select">
-                    <div class="catalog__tab-item_select-active"></div>
-                  </div>
-                </li>
-            </ul>
             
             <div class="catalog__slider">
               <ul class="catalog__list">
@@ -207,83 +288,6 @@
                   </div>
   
                 </li>
-
-                <li class="catalog__list-item">
-  
-                  <div class="catalog__list-item_image">
-  
-                    <div class="catalog__list-item_image-pic">
-                      <img src="img/main/clothes-item.png" alt="" class="catalog__list-item_image-pic_img">
-                    </div>
-                    <div class="catalog__list-item_image-full">
-                      <img src="img/main/clothes-item-full.png" alt="" class="catalog__list-item_image-full_img">
-                    </div>
-    
-                  </div>
-  
-                  <div class="catalog__list-item_description">
-                    <p class="catalog__list-item_description-name">Dawn Sky</p>
-                    <p class="catalog__list-item_description-price">27 600 ₽</p>
-                  </div>
-  
-                  <div class="catalog__list-item_options">
-                      <div class="catalog__list-item_options-details">Details</div>
-                      <div class="catalog__list-item_options-add">Add to card</div>
-                  </div>
-  
-                </li>
-
-                
-                <li class="catalog__list-item">
-  
-                  <div class="catalog__list-item_image">
-  
-                    <div class="catalog__list-item_image-pic">
-                      <img src="img/main/clothes-item.png" alt="" class="catalog__list-item_image-pic_img">
-                    </div>
-                    <div class="catalog__list-item_image-full">
-                      <img src="img/main/clothes-item-full.png" alt="" class="catalog__list-item_image-full_img">
-                    </div>
-    
-                  </div>
-  
-                  <div class="catalog__list-item_description">
-                    <p class="catalog__list-item_description-name">Dawn Sky</p>
-                    <p class="catalog__list-item_description-price">27 600 ₽</p>
-                  </div>
-  
-                  <div class="catalog__list-item_options">
-                      <div class="catalog__list-item_options-details">Details</div>
-                      <div class="catalog__list-item_options-add">Add to card</div>
-                  </div>
-  
-                </li>
-
-                
-                <li class="catalog__list-item">
-  
-                  <div class="catalog__list-item_image">
-  
-                    <div class="catalog__list-item_image-pic">
-                      <img src="img/main/clothes-item.png" alt="" class="catalog__list-item_image-pic_img">
-                    </div>
-                    <div class="catalog__list-item_image-full">
-                      <img src="img/main/clothes-item-full.png" alt="" class="catalog__list-item_image-full_img">
-                    </div>
-    
-                  </div>
-  
-                  <div class="catalog__list-item_description">
-                    <p class="catalog__list-item_description-name">Dawn Sky</p>
-                    <p class="catalog__list-item_description-price">27 600 ₽</p>
-                  </div>
-  
-                  <div class="catalog__list-item_options">
-                      <div class="catalog__list-item_options-details">Details</div>
-                      <div class="catalog__list-item_options-add">Add to card</div>
-                  </div>
-  
-                </li>
   
               </ul>
             </div>
@@ -291,6 +295,8 @@
 
 
           </section>
+
+
 
 
 
@@ -347,7 +353,6 @@
     
           </div>
 
-
           <header class="bottom">
             <div class="bottom__logo">
               <img src="img/header/logo.svg" alt="" class="bottom__logo-image">
@@ -375,15 +380,18 @@
             </ul>
           </header>
 
-
         </div>
 
       </div>
+
+
       
     </div>
-    <script src="js/preloader.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/productItem-slider.js"></script>
     <script src="js/burger-menu.js"></script>
-    
+    <script src="js/accordion-item.js"></script>
+    <script src="js/mainItem-slider.js"></script>
+   
 </body>
 </html>
