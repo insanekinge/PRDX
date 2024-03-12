@@ -28,11 +28,12 @@ a, a:link, a:visited  {
     text-decoration: underline;
     color: var(--white);
     /* display: inline-block; */
+    text-decoration: none;
 }
 
 a:hover  {
     /* color: inherit; */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Common */
