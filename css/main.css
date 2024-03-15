@@ -37,10 +37,14 @@ height: 0px;
   grid-area: 1 / 1 / 2 / 4;
   text-align: start;
   font-size: var(--titleMobilesize);
+  line-height: var(--lineHeightTitle);
 }
 
 .video__top-text{
   display: none;
+  line-height: var(--lineHeightText);
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .video__top-num{
@@ -91,10 +95,14 @@ height: 0px;
   grid-area: 1 / 1 / 2 / 4;
   text-align: start;
   font-size: var(--titleMobilesize);
+  line-height: var(--lineHeightTitle);
 }
 
 .popular__top-text{
   display: none;
+  line-height: var(--lineHeightText);
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .popular__top-count{
@@ -221,6 +229,7 @@ height: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .season{
@@ -633,6 +642,8 @@ height: 0px;
     text-align: left;
     text-transform: math-auto;
     font-size: var(--textMobilesize);
+    line-height: var(--lineHeightText)
+    
   }
   
   .video__top-num{
@@ -689,16 +700,17 @@ height: 0px;
     grid-gap: 0px; 
     overflow-x: hidden; /* Отключаем прокрутку при достижении ширины 1919px */
     -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .popular__slider{
+    overflow: hidden;
   }
 
   .popular__list::-webkit-scrollbar {
     display: none;
-  }
-   
- 
-  .popular__list {
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
   }
   
   .popular__list-item{

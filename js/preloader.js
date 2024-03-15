@@ -40,9 +40,6 @@ gsap.to(".preloader", {
 
 let scrollCount = 0;
 
-let Xwidth = '37px';
-
-
 function handleScroll(event) {
   if (scrollCount < 3) { 
     gsap.to(".preloader", {
@@ -76,6 +73,10 @@ function handleScroll(event) {
           let container = document.querySelector(".container");
           container.style.overflow = "auto";
           container.style.overflowX = "hidden";
+
+          let header = document.querySelector("header");
+          header.style.marginTop = `calc(- var(--headerMarginTop))`;
+
         } else {
           setTimeout(() => {
             window.addEventListener("wheel", handleScroll, { once: true }); // Добавление задержки между скроллами

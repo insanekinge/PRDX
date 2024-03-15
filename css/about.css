@@ -21,41 +21,45 @@
   height: auto;
   border-top: 1px #ffffff solid;
   border-bottom: 1px #ffffff solid;
+  padding: 0.5rem 0;
 }
 
 .brand__title{
   grid-area: 1 / 1 / 4 / 3;
   font-size: var(--titleMobilesize);
-  letter-spacing: -0.05rem;
   text-align: start;
+  line-height: var(--lineHeightTitle);
 }
 
 .brand__text-first{
   grid-area: 1 / 3 / 4 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .brand__text-second{
   grid-area: 4 / 1 / 5 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
   text-indent: 50%;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .brand__text-third{
   grid-area: 5 / 3 / 6 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .brand__video{
@@ -75,32 +79,35 @@
   width: 100%;
   height: auto;
   border-bottom: 1px #ffffff solid;
+  padding: 0.5rem 0;
 }
 
 .author__title{
   grid-area: 1 / 1 / 2 / 3;
   font-size: var(--titleMobilesize);
-  letter-spacing: -0.05rem;
   text-align: start;
+  line-height: var(--lineHeightTitle);
 }
 
 .author__text-first{
   grid-area: 1 / 3 / 2 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .author__text-second{
   grid-area: 2 / 1 / 3 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
   text-indent: 50%;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .author__image{
@@ -119,13 +126,13 @@
 
 .author__text-third{
   grid-area: 4 / 1 / 5 / 5; 
-  
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
   text-indent: 50%;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 
@@ -138,52 +145,56 @@
   width: 100%;
   height: auto;
   padding: 0.5rem 0 2.25rem 0;
+  padding: 0.5rem 0;
 }
 
 .product__title{
   grid-area: 1 / 1 / 2 / 3;
   font-size: var(--titleMobilesize);
-  letter-spacing: -0.05rem;
   text-align: start;
+  line-height: var(--lineHeightTitle);
 }
 
 .product__text-first{
   grid-area: 1 / 3 / 2 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .product__text-second{
   grid-area: 2 / 1 / 3 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
   text-indent: 50%;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .product__text-third{
   grid-area: 3 / 3 / 4 / 5;
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .product__text-fourth{
   grid-area: 4 / 1 / 5 / 5; 
-  
   font-size: var(--textMobilesize);
   text-align: start;
-  line-height: 140%;
+  line-height: var(--lineHeightText);
   text-transform: math-auto;
-  letter-spacing: -0.025rem;
   text-indent: 50%;
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .product__catalog{
@@ -216,30 +227,22 @@
     .brand__title{
       grid-area: 1 / 1 / 2 / 3;
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
-      line-height: 26.4px;
     }
     
     .brand__text-first{
       grid-area: 1 / 3 / 2 / 4;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
     }
     
     .brand__text-second{
       grid-area: 2 / 3 / 3 / 4;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
       text-indent: 0%;
     }
     
     .brand__text-third{
       grid-area: 1 / 4 / 2 / 5; 
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
 
     }
     
@@ -260,21 +263,17 @@
     .author__title{
       grid-area: 1 / 1 / 2 / 3; 
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
     }
     
     .author__text-first{
       grid-area: 1 / 3 / 2 / 4;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
     }
     
     .author__text-second{
       grid-area: 1 / 4 / 2 / 5;
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     .author__image{
@@ -290,8 +289,6 @@
       grid-area: 2 / 4 / 3 / 5;
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     
@@ -306,37 +303,27 @@
     .product__title{
       grid-area: 1 / 1 / 2 / 3;
       font-size: var(--titleMobilesize);
-      letter-spacing: 1.4px;
     }
     
     .product__text-first{
       grid-area: 1 / 3 / 2 / 4; 
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-second{
       grid-area: 1 / 4 / 2 / 5; 
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     
     .product__text-third{
       grid-area: 2 / 3 / 3 / 4; 
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-fourth{
       grid-area: 2 / 4 / 3 / 5; 
-      
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     
@@ -362,30 +349,22 @@
     .brand__title{
       grid-area: 1 / 1 / 2 / 3;
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
-      line-height: 26.4px;
     }
     
     .brand__text-first{
       grid-area: 1 / 3 / 2 / 4;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
     }
     
     .brand__text-second{
       grid-area: 1 / 4 / 2 / 5;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
       text-indent: 0%;
     }
     
     .brand__text-third{
       grid-area: 1 / 5 / 2 / 6;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
 
     }
     
@@ -406,21 +385,17 @@
     .author__title{
       grid-area: 1 / 1 / 2 / 3; 
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
     }
     
     .author__text-first{
       grid-area: 1 / 3 / 2 / 4;
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
     }
     
     .author__text-second{
       grid-area: 1 / 4 / 2 / 5;
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     .author__image{
@@ -436,8 +411,6 @@
       grid-area: 1 / 6 / 2 / 7;
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     
@@ -452,37 +425,27 @@
     .product__title{
       grid-area: 1 / 1 / 2 / 3;
       font-size: var(--titleMobilesize);
-      letter-spacing: 1.4px;
     }
     
     .product__text-first{
       grid-area: 1 / 3 / 2 / 4;
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-second{
       grid-area: 1 / 4 / 2 / 5; 
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     
     .product__text-third{
       grid-area: 1 / 5 / 2 / 6;
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-fourth{
       grid-area: 1 / 6 / 2 / 7;
-      
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     
@@ -503,27 +466,19 @@
     
     .brand__title{
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
-      line-height: 26.4px;
     }
     
     .brand__text-first{
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
     }
     
     .brand__text-second{
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
       text-indent: 0%;
     }
     
     .brand__text-third{
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
-      letter-spacing: 0.5px;
 
     }
     
@@ -540,19 +495,15 @@
     
     .author__title{ 
       font-size: var(--titleMobilesize);
-      letter-spacing: -0.05rem;
     }
     
     .author__text-first{
       font-size: var(--textMobilesize);
-      line-height: 19.6px;
     }
     
     .author__text-second{
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     .author__image{
@@ -566,8 +517,6 @@
     .author__text-third{
       font-size: var(--textMobilesize);
       text-indent: 0%;
-      line-height: 19.6px;
-      letter-spacing: -0.025rem;
     }
     
     
@@ -579,33 +528,24 @@
     
     .product__title{
       font-size: var(--titleMobilesize);
-      letter-spacing: 1.4px;
     }
     
     .product__text-first{
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-second{
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     
     .product__text-third{
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
     }
     
     .product__text-fourth{
       
       font-size: var(--textMobilesize);
-      line-height: 140%;
-      letter-spacing: 1.4px;
       text-indent: 0%;
     }
     

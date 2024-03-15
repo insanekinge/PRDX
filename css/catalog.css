@@ -42,6 +42,9 @@
       
       .catalog__top-text{
         display: none;
+        line-height: var(--lineHeightText);
+        word-spacing: var(--wordSpacingText);
+        letter-spacing: var(--letterSpacingText);
       }
       
       .catalog__top-count{

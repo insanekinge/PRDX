@@ -27,6 +27,10 @@ html::-webkit-scrollbar {
   --black: #000000;
   --white: #ffffff;
   --gray: #808080;
+  --letterSpacingText: none;
+  --wordSpacingText: 0rem;
+  --lineHeightTitle: 100%;
+  --lineHeightText: 140%; 
   --titleMobilesize: 1rem; 
   --titleMobilesizeSmall: 1rem; 
   --titleMobilesizeBig: 1.25rem;
@@ -34,10 +38,15 @@ html::-webkit-scrollbar {
   --textMobilesizeSmall: 0.75rem;
   --headerHeight: 60px;
   --halfOfX: 37px;
+  --headerMarginTop:0.5rem;
 }
 
 @media (min-width: 834px) {
   :root {
+    --letterSpacingText: none;
+    --wordSpacingText: 0.5rem;
+    --lineHeightTitle: 100%;
+    --lineHeightText: 140%; 
     --titleMobilesize: 1.25rem; 
     --titleMobilesizeSmall: 1.25rem; 
     --titleMobilesizeBig: 2rem;
@@ -46,11 +55,16 @@ html::-webkit-scrollbar {
     --textMobilesizeSmall: 0.875rem;
     --headerHeight: 71px;
     --halfOfX: 80px;
+    --headerMarginTop:1.25rem;
   }
 }
 
 @media (min-width: 1920px) {
   :root {
+    --letterSpacingText: -0.02rem;
+    --wordSpacingText: 0rem;
+    --lineHeightTitle: 120%;
+    --lineHeightText: 140%; 
     --titleMobilesize: 1.5rem; 
     --titleMobilesizeSmall: 1.5rem; 
     --titleMobilesizeBig: 3rem;
@@ -59,11 +73,16 @@ html::-webkit-scrollbar {
     --textMobilesizeSmall: 0.875rem;
     --headerHeight: 66px;
     --halfOfX: 116px;
+    --headerMarginTop:1.5rem;
   }
 }
 
 @media (min-width: 3440px) {
   :root {
+    --letterSpacingText: -0.02rem;
+    --wordSpacingText: 0rem;
+    --lineHeightTitle: 120%;
+    --lineHeightText: 140%; 
     --titleMobilesize: 3rem; 
     --titleMobilesize: 2.5rem;
     --titleMobilesizeBig: 6rem;
@@ -72,6 +91,7 @@ html::-webkit-scrollbar {
     --textMobilesizeSmall: 1.125rem;
     --headerHeight: 94px;
     --halfOfX: 214px;
+    --headerMarginTop:2.125rem;
   }
 }
 
@@ -113,7 +133,7 @@ header{
   justify-content: center;
   text-align: center;
   border: 1px #ffffff solid ;
-  margin: 0.5rem 0.5rem 0 0.5rem;
+  margin: var(--headerMarginTop) 0.5rem 0 0.5rem;
   z-index: 100;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -695,7 +715,7 @@ header{
     }
     header{  
       height: 3.125rem;
-      margin: 1.25rem 1.25rem 0 1.25rem;
+      margin: var(--headerMarginTop) 1.25rem 0 1.25rem;
     }
     
     
@@ -1055,7 +1075,7 @@ header{
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(1, auto);
       height: 2.625rem;
-      margin: 1.5rem 1.5rem 0 1.5rem;
+      margin: var(--headerMarginTop) 1.5rem 0 1.5rem;
       justify-items: start;
       padding: 0 0 0 0;
     }
@@ -1649,7 +1669,7 @@ header{
 
     header{
       height: 3.75rem;
-      margin: 2.125rem 2.125rem 0 2.125rem;
+      margin: var(--headerMarginTop) 2.125rem 0 2.125rem;
     }
     .header__logo{
       min-height: 3.75rem;

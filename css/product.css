@@ -246,17 +246,20 @@ height: 0px;
   height: auto;
   padding: 2.25rem 1.125rem 1.125rem 1.125rem;
   border: 1px var(--white) solid;
-  border-bottom: none;
 }
 
 .catalog__top-title{
   grid-area: 1 / 1 / 2 / 4;
   text-align: start;
   font-size: var(--titleMobilesize);
+  line-height: var(--lineHeightTitle);
 }
 
 .catalog__top-text{
   display: none;
+  line-height: var(--lineHeightText);
+  word-spacing: var(--wordSpacingText);
+  letter-spacing: var(--letterSpacingText);
 }
 
 .catalog__top-count{
