@@ -469,12 +469,13 @@ header{
   flex-direction: column;
   animation: slideDown 0.5s ease forwards;
   width: 100%;
-  height: calc(100vh - var(--headerHeight));
+  height: calc(100vh - var(--headerHeight) + var(--headerMarginTop));
   background-color: var(--black);
   justify-content: center;
   align-items: center;
   gap: 20px;
   font-size: var(--titleMobilesizeBig);
+  border: 1px var(--white) solid;
 }
 
 @keyframes slideDown {
