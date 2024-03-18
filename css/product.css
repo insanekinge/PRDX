@@ -225,6 +225,43 @@ height: 0px;
   height: 2px;
 }
 
+.product__item-table{
+  grid-area: 1 / 1 / 2 / 5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: auto;
+}
+
+.product__item-body{
+  grid-area: 1 / 1 / 2 / 5;
+  height: auto;
+  width: 100%;
+
+}
+
+.product__item-table_row {
+  grid-column: 1 / -1; /* Занимает все 4 столбца */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: auto;
+  word-break: break-all;
+}
+.product__item-table_row-title, .product__item-table_row-text {
+  padding: 0.5rem;
+  text-align: start;
+  text-decoration: none;
+  font-size: var(--textMobilesize);
+  word-break: break-all;
+}
+
+.product__item-table_row-title:last-child, .product__item-table_row-text:last-child {
+  padding: 0.5rem;
+  text-align: end;
+  word-break: break-all;
+}
+
 .catalog{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
