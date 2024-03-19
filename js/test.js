@@ -1,94 +1,60 @@
-gsap.set(".preloader__letter:nth-child(1)", { x: 0, y: 0, top: "40%",left: "40%", transformOrigin: "center center" }); 
-gsap.set(".preloader__letter:nth-child(2)", { x: 0, y: 0, top: "40%",right: "40%",transformOrigin: "center center" }); 
-gsap.set(".preloader__letter:nth-child(3)", { x: 0, y: 0, bottom: "40%",left: "40%", right: "40%", transformOrigin: "center center" }); 
-gsap.set(".preloader__letter:nth-child(4)", { x: 0, y: 0, bottom: "40%",right: "40%",transformOrigin: "center center" }); 
+function preloaderAnimation() {
+  const letter1 = document.getElementById('letter1');
+  const letter2 = document.getElementById('letter2');
+  const letter3 = document.getElementById('letter3');
+  const letter4 = document.getElementById('letter4');
 
-gsap.to(".preloader__letter:nth-child(1)", { x: 0, y: 0, top:0,left:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(2)", { x: 0, y: 0, top:0,right:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(3)", { x: 0, y: 0, bottom:0,left:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(4)", { x: 0, y: 0, bottom:0,right:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
+  const container = document.getElementById('container');
+  const containerContent = document.getElementById('containerContent');
 
+  function handleScroll() {
+    if (containerContent) { // Проверяем наличие элемента
+      const containerHeight = container.clientHeight;
+      const containerContentTop = containerContent.offsetTop;
+      const scrollTop = container.scrollTop;
 
+      // Вычисляем расстояние от верхней границы контейнера до элемента в процентах
+      const distance = containerContentTop - scrollTop;
+      const distancePercentage = Math.max(0, (distance / containerHeight) * 100);
 
-// Получение значения переменной CSS
-const headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--headerHeight');
+      const leftLetter2 = -100 + distancePercentage * 3 <= 0 ? 0 : -100 + (distancePercentage * 3); // Позиция для letter2
 
-// Преобразование значения в отрицательное число
-const negativeHeaderHeight = -parseInt(headerHeight, 10);
+      const topLetter3 = -100 + distancePercentage * 2 <= 0 ? 0 : -100 + (distancePercentage * 2);
 
-// Установка отрицательного значения в GSAP
-gsap.set(".header", {y: negativeHeaderHeight});
-gsap.set(".container", {y: negativeHeaderHeight, height: "100dvh", width: "100%"});
-gsap.set(".container__content", {y: 0, display: "none"}); 
-gsap.set(".footer", {y: 0, display: "none"}); 
-gsap.set(".preloader", {y: "", height: "100dvh", width: "100%"}); 
-gsap.to(".preloader", {
-  duration: 0.9, 
-  height: "80dvh",
-  ease: "power2.inOut", 
-  onComplete: () => { 
-    gsap.to(".header", {y: 0, duration: 0.9, ease: "power2.inOut"}); 
-    gsap.to(".container", {y: 0, duration: 0.9, height: "calc(100dvh - var(--headerHeight) + var(--headerMarginTop))",  ease: "power2.inOut", display: "block"}); 
-    gsap.to(".container__content", {y: 0, duration: 0.9, ease: "power2.inOut", display: "block"}); 
-    gsap.to(".preloader", {y: 0, duration: 0.9, ease: "power2.inOut"}); 
-    gsap.to(".footer", {y: 0, duration: 0, ease: "power2.inOut", display: "grid"});
-  }
-});
+      const leftLetter3 = topLetter3 === 0 ? Math.max(55, 100 - distancePercentage) : 100; // Позиция для letter3
 
+      letter3.style.left = `${leftLetter3}%`;
+      letter3.style.top = `${topLetter3}%`;
 
+      
+      const leftLetter4 = 100 - distancePercentage * 0.7 <= 25 ? 25 : 100 - distancePercentage * 0.7;// Позиция для letter3
+     
+      
 
-
-let scrollCount = 0;
-
-function handleScroll(event) {
-  if (scrollCount < 3) { 
-    gsap.to(".preloader", {
-      duration: 0.5, 
-      height: `-=25vh`, 
-      onComplete: () => {
-        if (scrollCount === 1) { 
-          gsap.to(".preloader__letter:nth-child(2)", { top: "0%",right: "25%", duration: 0.5, ease: "power2.inOut" }); 
-          gsap.to(".preloader__letter:nth-child(3)", { bottom: "0%", left: "0%", right: "100%", duration: 0.5, ease: "power2.inOut" });
-          gsap.to(".preloader__letter:nth-child(4)", { top: "50%",right: "0%", duration: 0.5, ease: "power2.inOut" }); 
-        }
-
-        if (scrollCount === 2) {
-          gsap.to(".preloader__letter:nth-child(2)", { top: "0%", right: "50%", duration: 0.5, ease: "power2.inOut" }); 
-          gsap.to(".preloader__letter:nth-child(3)", { bottom: "0%", left: "calc(100% - var(--halfOfX))", right: "0%",   duration: 0.5, ease: "power2.inOut" }); 
-          gsap.to(".preloader__letter:nth-child(4)", { top: "0%", right: "0%", duration: 0.5, ease: "power2.inOut" }); 
-        }
-
-        if (scrollCount === 3) {
-          gsap.to(".preloader__letter:nth-child(2)", { top: "0%", right: "60%", duration: 0.5, ease: "power2.inOut" }); 
-          gsap.to(".preloader__letter:nth-child(3)", { top: "0%",  left: "", right: "0%",  duration: 0.5, ease: "power2.inOut" }); 
-          gsap.to(".preloader__letter:nth-child(4)", {  top: "0%",right: "30%", duration: 0.5, ease: "power2.inOut" }); 
-
-          
-        }
-
-        
-
-        if (scrollCount === 3) {
-          document.body.style.overflow = "hidden"; // Включение скролла в body после завершения анимации
-          let container = document.querySelector(".container");
-          container.style.overflow = "auto";
-          container.style.overflowX = "hidden";
-
-          let header = document.querySelector("header");
-          header.style.marginTop = `calc(- var(--headerMarginTop))`;
-
-        } else {
-          setTimeout(() => {
-            window.addEventListener("wheel", handleScroll, { once: true }); // Добавление задержки между скроллами
-            window.addEventListener("touchmove", handleScroll, { once: true }); // Добавление задержки между касаниями
-          }, 500); // Пауза в 0.5 секунду между скроллами
-        }
+      if (leftLetter2 <= 25) {
+        letter2.style.left = `25%`;
+      } else {
+        letter2.style.left = `${leftLetter2}%`;
       }
-    });
-    scrollCount++; // Увеличение счетчика скролов
+
+      // if (topLetter3 == 0 ) {
+      //   letter3.style.left = `${leftLetter3}%`;
+      // } else {
+      //   letter3.style.top = `${topLetter3}%`;
+      // }
+
+
+      // letter3.style.top = `${topLetter3}%`;
+
+      letter4.style.left = `${leftLetter4}%`;
+      
+
+      console.log(letter3.style.left);
+    }
   }
+
+  // Добавляем обработчик события прокрутки к контейнеру
+  container.addEventListener('scroll', handleScroll);
 }
 
-// Добавление слушателя события колёсика мышки для обработки скролла
-window.addEventListener("wheel", handleScroll, { once: true }); // Триггером будет 1 скролл колёсиком мышки
-window.addEventListener("touchmove", handleScroll, { once: true }); // Триггером будет 1 касание на мобильном устройстве
+preloaderAnimation();

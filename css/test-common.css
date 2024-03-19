@@ -101,7 +101,6 @@
         background-color: var(--black);
         color: var(--white);
         margin: 0;
-        overflow: hidden;
         -ms-overflow-style: none;  /* IE и Edge */
         scrollbar-width: none;  /* Firefox */
       }
@@ -109,7 +108,6 @@
       
       .wrapper{
         margin: 0 0.5rem;
-        overflow: hidden; /* Или overflow-y: auto; */
         place-items: center;
         -ms-overflow-style: none; /* IE и Edge */
         scrollbar-width: none; /* Firefox */
@@ -117,6 +115,8 @@
         color: var(--white);
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        height: 100vh;
       }
       
       .wrapper::-webkit-scrollbar { width: 0; }
@@ -492,24 +492,18 @@
       
       
       .preloader{
-        flex-grow: 1;
         background-color: var(--black);
         color: var(--white);
-        height: 100vh;
         width: 100vw;
         transition: height 2s, width 2s;
         text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         font-family: "JetBrainsMono-Bold";
         padding: 0.5rem;
-        min-height: 2.625rem;
+        min-height: 80vh;
       }
       
       .preloader__inner{
-        display: flex;
+        display: block;
         width: 100%;
         height: 100%;
         align-items: center;
@@ -523,6 +517,7 @@
         max-width: 2.313rem;
         max-height: 1.625rem;
         width: 100%;
+        position: sticky;
       }
       
       .preloader__letter-image{
@@ -533,17 +528,23 @@
       }
       
       .preloader__letter:nth-child(1){
+        left: 0;
+        top: 0;
       }
       
       .preloader__letter:nth-child(2){
+        left: 100%;
+        top: 0;
       }
       
       .preloader__letter:nth-child(3){
-        transform-origin: bottom right;
-        /* transform: translate(-50%, 0%); */
+        left: 100%;
+        top: 100%;
       }
       
       .preloader__letter:nth-child(4){
+        left: 0;
+        top: 100%;
       }
       
       
@@ -552,13 +553,12 @@
         
       .container{
         display: none; /* Изначально скрываем container */
-        overflow: hidden;
         -ms-overflow-style: none;  /* IE и Edge */
         scrollbar-width: none;  /* Firefox */
         text-transform: uppercase;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
         background-color: var(--black);
         color: var(--white);
