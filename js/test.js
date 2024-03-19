@@ -3,10 +3,10 @@ gsap.set(".preloader__letter:nth-child(2)", { x: 0, y: 0, top: "40%",right: "40%
 gsap.set(".preloader__letter:nth-child(3)", { x: 0, y: 0, bottom: "40%",left: "40%", right: "40%", transformOrigin: "center center" }); 
 gsap.set(".preloader__letter:nth-child(4)", { x: 0, y: 0, bottom: "40%",right: "40%",transformOrigin: "center center" }); 
 
-gsap.to(".preloader__letter:nth-child(1)", { x: 0, y: 0, top:0,left:0, duration: 0.7, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(2)", { x: 0, y: 0, top:0,right:0, duration: 0.7, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(3)", { x: 0, y: 0, bottom:0,left:0, duration: 0.7, delay: 0, ease: "power2.inOut" }); 
-gsap.to(".preloader__letter:nth-child(4)", { x: 0, y: 0, bottom:0,right:0, duration: 0.7, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(1)", { x: 0, y: 0, top:0,left:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(2)", { x: 0, y: 0, top:0,right:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(3)", { x: 0, y: 0, bottom:0,left:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(4)", { x: 0, y: 0, bottom:0,right:0, duration: 0.9, delay: 0, ease: "power2.inOut" }); 
 
 
 
@@ -23,14 +23,14 @@ gsap.set(".container__content", {y: 0, display: "none"});
 gsap.set(".footer", {y: 0, display: "none"}); 
 gsap.set(".preloader", {y: "", height: "100dvh", width: "100%"}); 
 gsap.to(".preloader", {
-  duration: 0.7, 
+  duration: 0.9, 
   height: "80dvh",
   ease: "power2.inOut", 
   onComplete: () => { 
-    gsap.to(".header", {y: 0, duration: 0.7, ease: "power2.inOut"}); 
-    gsap.to(".container", {y: 0, duration: 0.7, height: "calc(100dvh - var(--headerHeight) + var(--headerMarginTop))",  ease: "power2.inOut", display: "block"}); 
-    gsap.to(".container__content", {y: 0, duration: 0.7, ease: "power2.inOut", display: "block"}); 
-    gsap.to(".preloader", {y: 0, duration: 0.7, ease: "power2.inOut"}); 
+    gsap.to(".header", {y: 0, duration: 0.9, ease: "power2.inOut"}); 
+    gsap.to(".container", {y: 0, duration: 0.9, height: "calc(100dvh - var(--headerHeight) + var(--headerMarginTop))",  ease: "power2.inOut", display: "block"}); 
+    gsap.to(".container__content", {y: 0, duration: 0.9, ease: "power2.inOut", display: "block"}); 
+    gsap.to(".preloader", {y: 0, duration: 0.9, ease: "power2.inOut"}); 
     gsap.to(".footer", {y: 0, duration: 0, ease: "power2.inOut", display: "grid"});
   }
 });

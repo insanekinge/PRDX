@@ -125,7 +125,7 @@ header{
   flex-shrink: 0;
   background-color: var(--black);
   color: var(--white);
-  height: 2.875rem;
+  height: 2.98rem;
   width: 100%;
   text-transform: math-auto;
   display: flex;
