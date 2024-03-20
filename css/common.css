@@ -141,6 +141,7 @@ header{
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
   text-transform: marth-auto;
+  position: relative;
 }
 
 

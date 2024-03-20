@@ -509,7 +509,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        min-height: 1.625rem;
       }
       
       .preloader__letter{
@@ -934,7 +933,6 @@
       
           .preloader{
             padding: 1.25rem 0;
-            min-height: 5.625rem;
           }
           
           .preloader__inner{
@@ -1381,7 +1379,6 @@
          
           .preloader{
             padding: 1.5rem 0;
-            min-height: 8rem;
           }
           
           .preloader__inner{
