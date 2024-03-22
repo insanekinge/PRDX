@@ -172,6 +172,12 @@ height: 0px;
   min-width: 20px;
   border-radius: 20px;
   font-size: var(--textMobilesizeSmall);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.checkout__list-item_option-minus:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .checkout__list-item_option-num{
@@ -187,6 +193,12 @@ height: 0px;
   min-width: 20px;
   border-radius: 20px;
   font-size: var(--textMobilesizeSmall);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.checkout__list-item_option-plus:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 
@@ -300,6 +312,12 @@ height: 0px;
   height: auto;
   text-transform: uppercase;
   font-size: var(--titleMobilesize);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form__button:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .footer__policy{

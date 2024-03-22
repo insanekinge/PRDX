@@ -576,7 +576,7 @@
         scrollbar-width: none;  /* Firefox */
       }
       
-      .container__content.no-preloader{
+      .container__content:first-child{
         height: calc(100vh - var(--headerHeight));
         overflow-y: auto;
         overflow-x: hidden;

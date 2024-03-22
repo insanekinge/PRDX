@@ -188,6 +188,12 @@ header{
 .header__basket-menu-wrapper.open {
   display: block;
 }
+
+.header__basket-menu-wrapper.open::-webkit-scrollbar { 
+  width: 0; 
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 /* Стили для контента внутри меню корзины */
 .basket_menu {
   display: flex;
@@ -195,7 +201,15 @@ header{
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-bottom: 10px;
 }
+
+.basket_menu::-webkit-scrollbar { 
+  width: 0; 
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 .basket__menu-top{
   display: flex;
@@ -396,6 +410,12 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.basket__checkout:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .header__nav{
@@ -578,7 +598,7 @@ header{
   scrollbar-width: none;  /* Firefox */
 }
 
-.container__content.no-preloader{
+.container__content:first-child{
   height: calc(100vh - var(--headerHeight));
   overflow-y: auto;
   overflow-x: hidden;
@@ -742,6 +762,11 @@ header{
   height: 100vh;
 }
 .basket_menu {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 10px;
+  
 }
 
 .basket__menu-top{
@@ -866,6 +891,12 @@ header{
   min-width: 22px;
   border-radius: 22px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.basket__list-item_option-minus:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .basket__list-item_option-num{
@@ -877,6 +908,12 @@ header{
   min-width: 22px;
   border-radius: 22px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.basket__list-item_option-plus:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 

@@ -211,7 +211,6 @@ height: 0px;
   justify-content: start;
   text-align: center;
   height: 2.813rem;
-  padding: 0 1.125rem;
   font-size: var(--textMobilesize);
 }
 
@@ -222,6 +221,12 @@ height: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popular__list-item_options-details:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .popular__list-item_options-add{
@@ -230,6 +235,12 @@ height: 0px;
   align-items: center;
   justify-content: center;
   height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popular__list-item_options-add:hover{
+  background-color: var(--white); 
+  color: var(--black); 
 }
 
 .season{
@@ -499,7 +510,6 @@ height: 0px;
   
   .popular__list-item_description{
     height: 3.125rem;
-    padding: 0 1.25rem;
   
   }
   
@@ -514,7 +524,6 @@ height: 0px;
   
   .popular__list-item_options{
     height: 3.125rem;
-    padding: 0 1.25rem;
   }
   
   .popular__list-item_options-details{
@@ -759,14 +768,12 @@ height: 0px;
   .popular__list-item:hover .popular__list-item_description {
     display: flex;
     height: 42px;
-    padding: 0 1.25rem;
   }
 
   
   .popular__list-item:hover .popular__list-item_options {
     display: flex;
     height: 42px;
-    padding: 0 1.25rem;
     width: 100%;
     justify-content: space-between;
   }
@@ -1027,7 +1034,6 @@ height: 0px;
   
   .popular__list-item:hover .popular__list-item_options {
     height: 60px;
-    padding: 0 2.125rem;
     width: 100%;
   }
 
