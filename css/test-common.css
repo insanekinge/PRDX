@@ -499,16 +499,15 @@
         text-transform: uppercase;
         font-family: "JetBrainsMono-Bold";
         padding: 0.5rem;
-        min-height: 80vh;
+        min-height: 80vh; /* Заменить 80dvh на 80vh */
       }
       
       .preloader__inner{
-        display: block;
-        width: 100%;
-        height: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        height: 100%; /* Занимает 100% высоты родителя (.preloader) */
+        position: relative; /* Позиционируется относительно родителя */
       }
       
       .preloader__letter{
@@ -516,7 +515,6 @@
         max-width: 2.313rem;
         max-height: 1.625rem;
         width: 100%;
-        position: sticky;
       }
       
       .preloader__letter-image{
@@ -529,21 +527,22 @@
       .preloader__letter:nth-child(1){
         left: 0;
         top: 0;
+        
       }
       
       .preloader__letter:nth-child(2){
-        left: 100%;
+        right: 0;
         top: 0;
       }
       
       .preloader__letter:nth-child(3){
-        left: 100%;
-        top: 100%;
+        right: 0;
+        bottom: 0;
       }
       
       .preloader__letter:nth-child(4){
         left: 0;
-        top: 100%;
+        bottom: 0;
       }
       
       
