@@ -513,7 +513,6 @@
         max-width: 2.313rem;
         max-height: 1.625rem;
         width: 100%;
-        transition: left 0.3s ease-out, top 0.3s ease-out; 
       }
       
       .preloader__letter-image{
