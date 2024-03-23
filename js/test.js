@@ -1,3 +1,5 @@
+
+
 const preloader = document.getElementById('preloader');
 const container = document.getElementById('container');
 
@@ -12,12 +14,58 @@ function animatePreloader(heightChange) {
   preloaderHeight += heightChange;
   preloaderHeight = Math.min(Math.max(preloaderHeight, 5), 80);
   preloader.style.minHeight = `${preloaderHeight}vh`;
+
+  // Вычисляем процентное соотношение изменяющейся высоты от изначально заданного размера
+  const percentageHeight = (preloaderHeight / 80) * 100;
+  console.log(`Процент изменения высоты preloader: ${percentageHeight}%`);
+
   if (preloaderHeight <= 5) {
     container.style.overflow = 'auto';
   } else {
     container.style.overflow = 'hidden';
   }
+
+  
+  const letter2Left = 100 + (percentageHeight - 100);
+  const letter3Left = 100 + (percentageHeight - 100);
+  const letter3Top = 100 + ((percentageHeight - 100) * 2);
+  const letter4Left = 0 - (percentageHeight - 100); 
+
+ 
+  if (letter2Left >= 25) {
+    gsap.to('#letter2', {
+      duration: 0.1,
+      left: `${letter2Left}%`,
+      ease: 'power2.out'
+    });
+  }
+ 
+  
+  if (letter3Top >= 0) {
+    gsap.to('#letter3', {
+      duration: 0.1,
+      top: `${letter3Top}%`,
+      ease: 'power4.out',
+      onComplete: () => {
+        
+          gsap.to('#letter3', {
+            duration: 0.1,
+            left: `${letter3Left}%`,
+            ease: 'power4.out'
+          });
+        
+      }
+    });
+  }
+
+  
+  gsap.to('#letter4', {
+    duration: 0.1,
+    left: `${letter4Left}%`,
+    ease: 'power4.out'
+  });
 }
+
 
 function handleWheel(event) {
   if (!isInViewport) {
@@ -43,6 +91,7 @@ function handleTouchMove(event) {
   touchStartY = touchMoveY;
 }
 
+
 window.addEventListener('touchstart', function (event) {
   touchStartY = event.touches[0].clientY;
 });
@@ -62,6 +111,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 observer.observe(preloader);
+
 
 
 
