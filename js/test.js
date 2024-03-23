@@ -1,23 +1,17 @@
-// Создаем переменные для элементов preloader и container
 const preloader = document.getElementById('preloader');
 const container = document.getElementById('container');
 
-// Задаем начальное значение прогресса прокрутки и начальную высоту preloader'а
 let scrollProgress = 0;
-let preloaderHeight = 80; // Начальная высота в vh
-let isInViewport = true; // Флаг для проверки видимости preloader'а
+let preloaderHeight = 80;
+let isInViewport = true;
+let touchStartY = 0;
 
-// Создаем анимацию с использованием GSAP
-const tl = gsap.timeline({ paused: true }); // Начинаем анимацию, но останавливаем её
+const tl = gsap.timeline({ paused: true });
 
-// Функция для изменения высоты preloader'а на определенную величину
 function animatePreloader(heightChange) {
-  // Ограничиваем изменение высоты, чтобы она не превышала максимальную
-  preloaderHeight += heightChange; // Изменяем высоту на указанное значение
-  preloaderHeight = Math.min(Math.max(preloaderHeight, 5), 80); // Ограничиваем высоту от 5 до 80vh
-  preloader.style.minHeight = `${preloaderHeight}vh`; // Применяем изменение к preloader'у
-
-  // Проверяем высоту preloader'а и применяем стили к контейнеру
+  preloaderHeight += heightChange;
+  preloaderHeight = Math.min(Math.max(preloaderHeight, 5), 80);
+  preloader.style.minHeight = `${preloaderHeight}vh`;
   if (preloaderHeight <= 5) {
     container.style.overflow = 'auto';
   } else {
@@ -25,44 +19,58 @@ function animatePreloader(heightChange) {
   }
 }
 
-// Функция обработки события wheel (колеса мыши)
 function handleWheel(event) {
-  // Проверяем, находится ли preloader в зоне видимости
   if (!isInViewport) {
-    return; // Если preloader не виден, прекращаем выполнение функции
+    return;
   }
-
-  // Получаем прогресс прокрутки на основе дельты колеса мыши
   const delta = event.deltaY;
   scrollProgress += delta;
-
-  // Ограничиваем прогресс в пределах от 0 до 100
   scrollProgress = Math.min(Math.max(scrollProgress, 0), 100);
-
-  // Определяем, на сколько изменить высоту preloader'а в зависимости от прогресса прокрутки
-  const heightChange = delta > 0 ? -5 : 5; // Изменение высоты на 5vh в зависимости от направления прокрутки
-
-  // Добавляем анимацию изменения высоты preloader'а на указанное значение
+  const heightChange = delta > 0 ? -5 : 5;
   animatePreloader(heightChange);
 }
 
-// Создаем новый экземпляр Intersection Observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    // Обновляем флаг isInViewport в зависимости от видимости preloader'а
+function handleTouchMove(event) {
+  if (!isInViewport) {
+    return;
+  }
+  const touchMoveY = event.touches[0].clientY;
+  const deltaY = touchMoveY - touchStartY;
+  scrollProgress += deltaY;
+  scrollProgress = Math.min(Math.max(scrollProgress, 0), 100);
+  const heightChange = deltaY > 0 ? 5 : -5;
+  animatePreloader(heightChange);
+  touchStartY = touchMoveY;
+}
+
+window.addEventListener('touchstart', function (event) {
+  touchStartY = event.touches[0].clientY;
+});
+
+window.addEventListener('touchmove', function (event) {
+  handleTouchMove(event);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     isInViewport = entry.isIntersecting;
     if (isInViewport) {
-      // Если preloader виден, активируем обработчик события wheel
       window.addEventListener('wheel', handleWheel);
     } else {
-      // Если preloader не виден, деактивируем обработчик события wheel
       window.removeEventListener('wheel', handleWheel);
     }
   });
 });
-
-// Начинаем отслеживать видимость preloader'а
 observer.observe(preloader);
+
+
+
+
+
+
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   const container = document.getElementById('container');
