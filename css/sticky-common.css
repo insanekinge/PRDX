@@ -40,6 +40,7 @@
         --halfOfX: 37px;
         --headerMarginTop:0.5rem;
         --letterMargin:-1.625rem;
+        --preloaderHeight: 90vh;
       }
       
       @media (min-width: 834px) {
@@ -58,6 +59,7 @@
           --halfOfX: 80px;
           --headerMarginTop:1.25rem;
           --letterMargin:-3.125rem;
+          --preloaderHeight: 90vh;
         }
       }
       
@@ -77,6 +79,7 @@
           --halfOfX: 116px;
           --headerMarginTop:1.5rem;
           --letterMargin:-5rem;
+          --preloaderHeight: 90vh;
         }
       }
       
@@ -96,6 +99,7 @@
           --halfOfX: 214px;
           --headerMarginTop:2.125rem;
           --letterMargin:-9.25rem;
+          --preloaderHeight: 90vh;
         }
       }
       
@@ -496,16 +500,25 @@
       }
       
       
+      #header, #containerContent {
+        display: none;
+        transform: translateY(-100%);
+      }
+      
+      #preloader {
+        height: 100vh;
+      }
+
       
       .preloader{
         background-color: var(--black);
         color: var(--white);
-        width: 100vw;
+        width: 100%;
         transition: height 2s, width 2s;
         text-transform: uppercase;
         font-family: "JetBrainsMono-Bold";
         padding: 0.5rem;
-        min-height: 80vh; 
+        min-height: 85vh; 
       }
       
       .preloader__inner{
@@ -528,24 +541,24 @@
       }
       
       .preloader__letter:nth-child(1){
-        left: 0;
-        top: var(--headerMarginTop);
+        /* left: 0;
+        top: var(--headerMarginTop); */
       }
 
       .preloader__letter:nth-child(2){
-        left: 100%;
-        top: var(--headerMarginTop);
+        /* left: 100%;
+        top: var(--headerMarginTop); */
         margin-top: var(--letterMargin);
       }
 
       .preloader__letter:nth-child(3){
-        left: 100%;
-        top: 100%;
+        /* left: 100%;
+        top: 100%; */
       }
 
       .preloader__letter:nth-child(4){
-        left: 0;
-        top: 100%;
+        /* left: 0;
+        top: 100%; */
       }
       
       
@@ -935,6 +948,7 @@
       
           .preloader{
             padding: 1.25rem 0;
+            min-height: 85vh; 
           }
           
           .preloader__inner{
@@ -1381,6 +1395,7 @@
          
           .preloader{
             padding: 1.5rem 0;
+            min-height: 86vh; 
           }
           
           .preloader__inner{
@@ -1799,7 +1814,7 @@
       
           .preloader{
             padding: 2.125rem 0;
-            min-height: 216px;
+            min-height: 86vh; 
           }
           
           .preloader__inner{

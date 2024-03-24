@@ -1,3 +1,42 @@
+// Устанавливаем начальные значения для preloader__letter
+gsap.set(".preloader__letter:nth-child(1)", { x: 0, y: 0, top: "45%", left: "45%", transformOrigin: "center center" }); 
+gsap.set(".preloader__letter:nth-child(2)", { x: 0, y: 0, top: "45%", left: "55%", transformOrigin: "center center" }); 
+gsap.set(".preloader__letter:nth-child(3)", { x: 0, y: 0, top: "55%", left: "55%", transformOrigin: "center center" }); 
+gsap.set(".preloader__letter:nth-child(4)", { x: 0, y: 0, top: "55%", left: "45%", transformOrigin: "center center" }); 
+
+// Анимация перемещения preloader__letter в нужные позиции
+gsap.to(".preloader__letter:nth-child(1)", { x: 0, y: 0, top: "0%", left: "0%", duration: 0.7, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(2)", { x: 0, y: 0, top: "0%", left: "100%", duration: 0.7, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(3)", { x: 0, y: 0, top: "100%", left: "100%", duration: 0.7, delay: 0, ease: "power2.inOut" }); 
+gsap.to(".preloader__letter:nth-child(4)", { x: 0, y: 0, top: "100%", left: "0%", duration: 0.7, delay: 0, ease: "power2.inOut" });
+
+// Дополнительная анимация для установки top значения var(--headerMarginTop)
+gsap.to([".preloader__letter:nth-child(1)", ".preloader__letter:nth-child(2)"], { top: "var(--headerMarginTop)", duration: 0.7, delay: 0.7, ease: "power2.inOut" });
+// Получение значения переменной CSS
+const headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--headerHeight');
+
+// Преобразование значения в отрицательное число
+const negativeHeaderHeight = -parseInt(headerHeight, 10);
+
+// Установка отрицательного значения в GSAP
+gsap.set(".header", {y: negativeHeaderHeight});
+gsap.set(".container", {y: negativeHeaderHeight, height: "100dvh", width: "100%"});
+gsap.set(".container__content", {y: 0, display: "none"}); 
+gsap.set(".footer", {y: 0, display: "none"}); 
+gsap.set(".preloader", {y: "", height: "100dvh", width: "100%"}); 
+gsap.to(".preloader", {
+  duration: 0.7, 
+  height: "var(--preloaderHeight)",
+  ease: "power2.inOut", 
+  onComplete: () => { 
+    gsap.to(".header", {y: 0, duration: 0.7, ease: "power2.inOut"}); 
+    gsap.to(".container", {y: 0, duration: 0.7, height: "calc(100dvh - var(--headerHeight) + var(--headerMarginTop))",  ease: "power2.inOut", display: "block"}); 
+    gsap.to(".container__content", {y: 0, duration: 0.7, ease: "power2.inOut", display: "block"}); 
+    gsap.to(".preloader", {y: 0, duration: 0.7, ease: "power2.inOut"}); 
+    gsap.to(".footer", {y: 0, duration: 0, ease: "power2.inOut", display: "grid"});
+  }
+});
+
 function preloaderAnimation() {
   const letter1 = document.getElementById('letter1');
   const letter2 = document.getElementById('letter2');
@@ -43,12 +82,6 @@ function preloaderAnimation() {
       
       letter4.style.left = `${leftLetter4}%`;
       letter4.style.top = `${topLetter4}`;
-      // if (leftLetter4 < 100) {
-      //   letter4.style.left = `${leftLetter4}%`;
-      //   letter4.style.top = `${topLetter4}`;
-      // } else {
-      //   letter4.style.left = `100%`; // Убедимся, что left не выходит за пределы контейнера
-      // }
     }
   }
 
