@@ -103,6 +103,7 @@
         margin: 0;
         -ms-overflow-style: none;  /* IE и Edge */
         scrollbar-width: none;  /* Firefox */
+        overflow: hidden;
       }
       body::-webkit-scrollbar { width: 0; }
       
