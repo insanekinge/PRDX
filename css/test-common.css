@@ -511,7 +511,7 @@
       }
       
       .preloader__letter{
-        position: sticky;
+        position: absolute;
         max-width: 2.313rem;
         max-height: 1.625rem;
         width: 100%;

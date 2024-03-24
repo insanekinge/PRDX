@@ -1,7 +1,8 @@
 .container {
         width: 100%;
         height: calc(100vh - var(--headerHeight));
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
   }
   .container::-webkit-scrollbar {
     width: 0;
