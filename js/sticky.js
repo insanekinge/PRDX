@@ -1,29 +1,3 @@
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const container = document.getElementById('container');
-//   const preloader = document.getElementById('preloader');
-//   const minHeight = 5; // Минимальная высота preloader в процентах
-
-//   // Функция для обновления высоты preloader
-//   function updatePreloaderHeight() {
-//     const containerScroll = container.scrollTop;
-//     const maxContainerScroll = container.scrollHeight - container.clientHeight;
-//     const maxPreloaderHeight = 80; // Максимальная высота preloader
-
-//     // Рассчитываем новую высоту preloader
-//     let newHeight = maxPreloaderHeight - (containerScroll / maxContainerScroll) * maxPreloaderHeight;
-//     newHeight = Math.max(newHeight, minHeight); // Убеждаемся, что высота не меньше минимальной
-//     preloader.style.minHeight = newHeight + 'vh';
-//   }
-
-//   // Вызываем функцию при загрузке страницы и при скролле контейнера
-//   updatePreloaderHeight();
-//   container.addEventListener('scroll', updatePreloaderHeight);
-// });
-
-
-
 function preloaderAnimation() {
   const letter1 = document.getElementById('letter1');
   const letter2 = document.getElementById('letter2');
@@ -51,7 +25,7 @@ function preloaderAnimation() {
         letter2.style.left = `${leftLetter2}%`;
       }
 
-      const topLetter3 = -100 + distancePercentage * 2 <= 2 ? 8 + 'px' : -100 + (distancePercentage * 2) + '%';
+      const topLetter3 = -100 + distancePercentage * 2 <= 2 ? 'var(--headerMarginTop)' : -100 + (distancePercentage * 2) + '%';
       const leftLetter3 = distancePercentage * 2 >= 100 ? 100 : distancePercentage * 2;
 
       letter3.style.left = `${leftLetter3}%`;
@@ -63,14 +37,18 @@ function preloaderAnimation() {
         letter3.style.left = `${leftLetter3}%`;
       }
 
-      const leftLetter4 = distancePercentage >= 94 ? 0 : 100 - distancePercentage; 
-      const topLetter4 = leftLetter4 >= 100 ? 0 : 100;
 
-      letter4.style.left = `${leftLetter4}%`;
-      letter4.style.top = `${topLetter4}%`;
+      const topLetter4 = -50 + distancePercentage * 2 <= 2 ? 'var(--headerMarginTop)' : -50 + (distancePercentage * 2) + '%';
+      const leftLetter4 = distancePercentage * 2 >= 187 ? 0 : 175 - distancePercentage * 2;
       
-
-      console.log(distancePercentage);
+      letter4.style.left = `${leftLetter4}%`;
+      letter4.style.top = `${topLetter4}`;
+      // if (leftLetter4 < 100) {
+      //   letter4.style.left = `${leftLetter4}%`;
+      //   letter4.style.top = `${topLetter4}`;
+      // } else {
+      //   letter4.style.left = `100%`; // Убедимся, что left не выходит за пределы контейнера
+      // }
     }
   }
 

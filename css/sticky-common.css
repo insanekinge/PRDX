@@ -39,6 +39,7 @@
         --headerHeight: 60px;
         --halfOfX: 37px;
         --headerMarginTop:0.5rem;
+        --letterMargin:-1.625rem;
       }
       
       @media (min-width: 834px) {
@@ -56,6 +57,7 @@
           --headerHeight: 71px;
           --halfOfX: 80px;
           --headerMarginTop:1.25rem;
+          --letterMargin:-3.125rem;
         }
       }
       
@@ -74,6 +76,7 @@
           --headerHeight: 66px;
           --halfOfX: 116px;
           --headerMarginTop:1.5rem;
+          --letterMargin:-5rem;
         }
       }
       
@@ -92,6 +95,7 @@
           --headerHeight: 94px;
           --halfOfX: 214px;
           --headerMarginTop:2.125rem;
+          --letterMargin:-9.25rem;
         }
       }
       
@@ -525,13 +529,13 @@
       
       .preloader__letter:nth-child(1){
         left: 0;
-        top: 8px;
+        top: var(--headerMarginTop);
       }
 
       .preloader__letter:nth-child(2){
         left: 100%;
-        top: 8px;
-        margin-top: -30px;
+        top: var(--headerMarginTop);
+        margin-top: var(--letterMargin);
       }
 
       .preloader__letter:nth-child(3){
